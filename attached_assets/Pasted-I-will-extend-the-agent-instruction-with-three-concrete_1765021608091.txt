@@ -1,0 +1,393 @@
+I will extend the agent instruction with three concrete layers you can use immediately:
+	1.	Wireframe-level page layouts
+	2.	UI microcopy + legal-safe disclaimers
+	3.	Data model + roles/permissions + rule engine logic
+
+This will give your builder enough specificity to execute without guesswork.
+
+⸻
+
+12. Wireframe-Level Layouts (Build Specs)
+
+12.1 Home
+
+Goal: Establish authority, clarify the 3-layer model, drive qualified actions.
+
+Layout
+	1.	Top Bar
+	•	Language selector
+	•	Region selector (impacts eligibility messaging)
+	2.	Header Nav
+	•	Home | Explore | Marketplace | Shipping | Welfare | Coverage | Institutions | Resources
+	3.	Hero
+	•	Headline + subheadline
+	•	3 CTAs:
+	•	Explore Animals
+	•	Verify Eligibility
+	•	Request Shipping Quote
+	4.	3-Pillar Panel
+	•	Discovery
+	•	Verified Acquisition
+	•	Compliant Global Logistics
+	5.	Trust & Governance Strip
+	•	Verified sellers
+	•	Prohibited species controls
+	•	Documentation-first workflows
+	•	Welfare checkpoints
+	6.	Featured Categories
+	•	Livestock
+	•	Companion (optional)
+	•	Aquaculture
+	•	Captive-bred specialty (eligibility-gated)
+	7.	How It Works (mini timeline)
+	8.	Institutional Solutions teaser
+	9.	Testimonials/Case Outcomes
+	10.	Footer
+
+	•	Legal & Policies hub
+
+⸻
+
+12.2 Explore Animals (Public, Zoo-Style)
+
+Goal: Education-first browsing without implying unrestricted trade.
+
+Layout
+	1.	Search + Filters
+	•	Category
+	•	Region
+	•	Care level
+	•	Availability status
+	2.	Animal Cards
+	•	Image
+	•	Species name
+	•	Care level badge
+	•	“Eligibility varies by region” badge
+	•	“Marketplace login required to view acquisition pathways”
+	3.	Species Detail Page
+	•	Overview
+	•	Welfare notes
+	•	Care-level guidance
+	•	High-level documentation preview
+	•	“Check eligibility” button
+	•	“Institutional inquiries” link
+
+⸻
+
+12.3 How It Works
+
+Goal: Convert compliance complexity into a clean transaction narrative.
+
+Layout
+	•	9-step horizontal timeline with expandable panels:
+	1.	Explore
+	2.	Region eligibility scan
+	3.	Account verification
+	4.	Seller vetting
+	5.	Document readiness
+	6.	Vet-supported travel clearance
+	7.	Payment confirmation
+	8.	Booking + customs/entry support
+	9.	Delivery + welfare closeout
+
+⸻
+
+12.4 Marketplace (Login-Only)
+
+Goal: Controlled commerce with visible governance.
+
+Layout
+	1.	Compliance Banner
+	•	“Listings and shipments require verification and legal eligibility.”
+	2.	Filter/Safety Panel
+	•	Destination country selector
+	•	Auto-hides ineligible species categories
+	3.	Listing Grid
+	•	Verification badge
+	•	Health doc status indicator
+	•	Origin country
+	•	“Approval required” tag
+	4.	Listing Detail
+	•	Seller verification
+	•	Attestations
+	•	Document status list
+	•	“Start eligibility check”
+	•	“Initiate acquisition workflow” (not “Buy now”)
+
+⸻
+
+12.5 Shipping Portal (Login)
+
+Goal: Make logistics feel enterprise-grade.
+
+Layout
+	1.	Create Shipment
+	2.	Route + welfare plan summary
+	3.	Dynamic document checklist
+	4.	Upload center
+	5.	Live status milestones
+	6.	Delivery confirmation + post-transport report
+
+⸻
+
+12.6 Welfare & Standards
+
+Goal: Anchor brand legitimacy.
+
+Layout
+	•	Welfare charter
+	•	Handling standards
+	•	Partner network overview
+	•	Emergency escalation pathway
+	•	FAQ
+
+⸻
+
+12.7 Coverage
+
+Goal: Reduce disputes and overpromising.
+
+Layout
+	•	Interactive map or country list
+	•	“Species eligibility differs by destination” notice
+	•	Lane-level notes
+
+⸻
+
+12.8 Institutional Services
+
+Goal: High-trust segment for scale.
+
+Layout
+	•	Solutions by institution type
+	•	Bulk and scheduled transport
+	•	Compliance-managed accounts
+	•	Dedicated support model
+	•	Inquiry CTA
+
+⸻
+
+13. UI Copy Pack (Safe, Clear, Conversion-Ready)
+
+13.1 Hero Options
+	•	Option A:
+Explore verified animals and activate compliant global delivery with welfare-first standards.
+	•	Option B:
+A regulated ecosystem for animal discovery, verified acquisition, and international transport.
+
+13.2 Pillar Microcopy
+	•	Discovery
+Curated, education-forward species exploration with region-aware eligibility signals.
+	•	Verified Acquisition
+Listings from vetted sellers with documentation and ethical sourcing requirements.
+	•	Compliant Logistics
+End-to-end cross-border transport aligned to welfare and destination rules.
+
+13.3 Marketplace Button Language
+
+Use:
+	•	“Initiate Eligibility Check”
+	•	“Begin Acquisition Workflow”
+	•	“Request Seller Documentation”
+Avoid:
+	•	“Instant purchase”
+	•	“Ship anywhere”
+	•	“No paperwork”
+
+13.4 Sitewide Disclaimers (Repeatable Blocks)
+	•	Eligibility Notice
+Availability and transport eligibility vary by species, origin, and destination.
+	•	Regulatory Authority Notice
+Documentation support does not replace official approvals by competent authorities.
+	•	Prohibited Trade Notice
+We do not list, broker, or ship prohibited or restricted species.
+	•	Welfare Commitment
+All shipments must meet our welfare and fitness-to-travel thresholds.
+
+⸻
+
+14. Data Model (High-Level, Build-Ready)
+
+14.1 Core Entities
+	1.	User
+	•	id
+	•	role
+	•	region
+	•	verification_status
+	2.	SellerProfile
+	•	business_type
+	•	license/permit references (fields, not legal advice)
+	•	audit_status
+	3.	BuyerProfile
+	•	purpose_of_purchase (companion/farm/institutional)
+	•	readiness_acknowledgments
+	4.	AnimalSpecies
+	•	category
+	•	care_level
+	•	eligibility_ruleset_id
+	5.	Listing
+	•	species_id
+	•	seller_id
+	•	origin_country
+	•	status
+	•	health_doc_status
+	•	verification_badges
+	6.	Order / AcquisitionCase
+	•	buyer_id
+	•	listing_id
+	•	compliance_state
+	•	payment_state
+	7.	Document
+	•	owner_type (seller/buyer/shipment)
+	•	doc_type
+	•	status
+	•	expiry (if applicable)
+	8.	Shipment
+	•	order_id
+	•	route
+	•	welfare_plan_id
+	•	status
+	9.	WelfareCheckpoint
+	•	shipment_id
+	•	timestamp
+	•	condition_notes (non-graphic)
+	10.	CountryRule
+
+	•	country_code
+	•	allowed_categories
+	•	restricted_categories
+	•	required_doc_types
+
+	11.	AuditLog
+
+	•	actor_id
+	•	action
+	•	entity
+	•	timestamp
+
+⸻
+
+15. Roles & Permissions (RBAC)
+
+15.1 Roles
+	•	Public
+	•	Registered User
+	•	Verified Buyer
+	•	Verified Seller
+	•	Compliance Admin
+	•	Super Admin
+	•	Institutional Account Manager (optional)
+
+15.2 Permission Matrix (Summary)
+	•	Public
+	•	Explore content only
+	•	Registered
+	•	Save favorites, initiate eligibility pre-check
+	•	Verified Buyer
+	•	View eligible listings, start acquisition case
+	•	Verified Seller
+	•	Create/edit listings subject to moderation
+	•	Compliance Admin
+	•	Approve sellers
+	•	Approve/deny listings
+	•	Manage country rules
+	•	Review documents
+	•	Super Admin
+	•	System-wide overrides + policy publication
+
+⸻
+
+16. Eligibility Rule Engine (Business Logic)
+
+16.1 Hard Blocks
+	•	If seller not verified → cannot publish listing
+	•	If buyer not verified → cannot start acquisition
+	•	If species category restricted for destination → block checkout
+	•	If required documents missing → block shipment booking
+
+16.2 Soft Warnings
+	•	Care level high + buyer readiness not acknowledged → warning + education prompt
+	•	Route complexity high → auto-recommend priority handling
+
+16.3 Region-Aware UI
+	•	Destination selector updates:
+	•	visible categories
+	•	listing availability
+	•	document checklist
+
+⸻
+
+17. Admin Moderation Workflows
+
+17.1 Seller Onboarding
+	1.	Submit profile
+	2.	Upload verification set
+	3.	Internal review
+	4.	Approve with tier:
+	•	Standard Verified
+	•	Premium Verified (optional)
+
+17.2 Listing Approval
+	1.	Draft
+	2.	Auto rule scan
+	3.	Compliance review
+	4.	Publish or reject with reason code
+
+17.3 Document Review
+	•	Status states:
+Draft → Submitted → Needs Action → Approved
+
+⸻
+
+18. MVP Build Backlog (Agent-Ready)
+
+18.1 Must-Have
+	•	Public Explore pages
+	•	Auth-gated Marketplace
+	•	Seller onboarding
+	•	Buyer verification
+	•	Listing moderation
+	•	Quote + Shipment request
+	•	Document center
+	•	Admin console
+
+18.2 Nice-to-Have
+	•	Institutional dashboards
+	•	Advanced tracking
+	•	Partner directory
+	•	Multi-language rollout
+
+⸻
+
+19. Visual/Brand Guardrails
+
+The design should feel:
+	•	Regulated
+	•	Institutional-grade
+	•	Clean and authoritative
+	•	Education-forward
+
+Avoid visual cues that imply:
+	•	Unrestricted exotic trade
+	•	Impulse purchasing
+
+⸻
+
+20. Deliverables for Your Agent
+
+Provide these as a package:
+	1.	This architecture + workflow brief
+	2.	Brand name + logo
+	3.	Initial target regions
+	4.	Initial allowed categories
+	5.	Draft policy statements
+	6.	Service tier definitions
+
+⸻
+
+If you want the next layer
+
+I can generate:
+	•	A full wireframe script per page (section-by-section headings and layout notes).
+	•	A complete copy deck for the public pages.
+	•	A no-code-friendly implementation plan (Webflow/Framer + gated member tools) or a custom stack outline (Next.js + RBAC + secure document storage).
