@@ -359,7 +359,6 @@ export default function ExplorePage() {
             </div>
           </div>
         </div>
-      </section>
     </>
   );
 }
