@@ -229,9 +229,8 @@ export default function ShippingPage() {
             </Card>
           </div>
         </section>
-      </>
-
       <Footer />
+    </>
     </div>
   );
 }
