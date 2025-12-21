@@ -29,6 +29,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
+import { Footer } from "@/components/footer";
 
 const accountTypes = [
   {
@@ -120,7 +121,8 @@ export default function VerifyPage() {
   const progress = (step / 4) * 100;
 
   return (
-    <div className="flex-1 flex items-center justify-center py-16 px-4">
+    <>
+      <div className="flex-1 flex items-center justify-center py-16 px-4">
         <Card className="w-full max-w-lg">
           <CardHeader className="text-center">
             <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -392,9 +394,8 @@ export default function VerifyPage() {
             )}
           </CardContent>
         </Card>
-      </main>
-
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

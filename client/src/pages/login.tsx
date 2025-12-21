@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/form";
 import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/hooks/use-toast";
+import { Footer } from "@/components/footer";
 
 const loginSchema = z.object({
   email: z.string().email("Valid email is required"),
@@ -48,7 +49,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex-1 flex items-center justify-center py-16 px-4">
+    <>
+      <div className="flex-1 flex items-center justify-center py-16 px-4">
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
             <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -139,9 +141,8 @@ export default function LoginPage() {
             </p>
           </CardContent>
         </Card>
-      </main>
-
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Footer } from "@/components/footer";
 import { ProcessTimeline } from "@/components/process-timeline";
 import { DisclaimerBlock } from "@/components/disclaimer-block";
 
@@ -76,9 +77,7 @@ export default function HowItWorksPage() {
             </div>
           </div>
         </section>
-      </main>
-
       <Footer />
-    </div>
+    </>
   );
 }

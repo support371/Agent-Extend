@@ -26,6 +26,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { Footer } from "@/components/footer";
 
 const institutionTypes = [
   { id: "zoo", label: "Zoos & Conservation", icon: Trees },
@@ -342,9 +343,7 @@ export default function InstitutionalPage() {
             </div>
           </div>
         </section>
-      </main>
-
       <Footer />
-    </div>
+    </>
   );
 }

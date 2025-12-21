@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { ComplianceBanner } from "@/components/compliance-banner";
+import { Footer } from "@/components/footer";
 
 interface CountryData {
   code: string;
@@ -88,7 +89,9 @@ export default function CoveragePage() {
 
   return (
     <>
-      <section className="bg-muted/30 border-b py-12">
+      <div>
+        <main>
+          <section className="bg-muted/30 border-b py-12">
           <div className="max-w-7xl mx-auto px-4">
             <h1 className="text-4xl font-bold mb-4">Coverage & Eligibility</h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
@@ -259,9 +262,9 @@ export default function CoveragePage() {
             </div>
           </div>
         </section>
-      </main>
-
+        </main>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

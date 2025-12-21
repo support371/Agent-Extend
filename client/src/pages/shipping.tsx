@@ -231,6 +231,5 @@ export default function ShippingPage() {
         </section>
       <Footer />
     </>
-    </div>
   );
 }
