@@ -38,7 +38,7 @@ export function Footer() {
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               The premier institutional platform for verified animal discovery, global compliance, and welfare-first transport logistics.
             </p>
-            <div className="flex flex-col gap-3 text-sm text-primary-foreground/90">
+          <div className="flex flex-col gap-3 text-sm text-primary-foreground/90">
               <a href="mailto:support@terralegit.com" className="flex items-center gap-2 hover:bg-white/10 transition-colors rounded-md p-2 -m-2" data-testid="link-email">
                 <Mail className="h-4 w-4" />
                 support@terralegit.com
@@ -47,21 +47,18 @@ export function Footer() {
                 <Phone className="h-4 w-4" />
                 +1-800-TERRA
               </a>
-            </div>
-          </div>
               <span className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
                 Global Operations
               </span>
             </div>
           </div>
-
           <div>
-            <h4 className="font-semibold mb-4">Platform</h4>
-            <ul className="space-y-2">
+            <h4 className="font-bold text-lg mb-6 tracking-tight text-white">Platform</h4>
+            <ul className="space-y-3">
               {footerLinks.platform.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <Link href={link.href} className="text-sm text-primary-foreground/70 hover:text-white transition-colors" data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}>
                     {link.label}
                   </Link>
                 </li>
@@ -70,11 +67,11 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Compliance & Standards</h4>
-            <ul className="space-y-2">
+            <h4 className="font-bold text-lg mb-6 tracking-tight text-white">Compliance & Standards</h4>
+            <ul className="space-y-3">
               {footerLinks.compliance.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <Link href={link.href} className="text-sm text-primary-foreground/70 hover:text-white transition-colors" data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}>
                     {link.label}
                   </Link>
                 </li>
@@ -83,11 +80,11 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Legal & Policies</h4>
-            <ul className="space-y-2">
+            <h4 className="font-bold text-lg mb-6 tracking-tight text-white">Legal & Policies</h4>
+            <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <Link href={link.href} className="text-sm text-primary-foreground/70 hover:text-white transition-colors" data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}>
                     {link.label}
                   </Link>
                 </li>
@@ -96,10 +93,10 @@ export function Footer() {
           </div>
         </div>
 
-        <Separator className="my-8" />
+        <Separator className="my-12 bg-white/10" />
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-6 flex-wrap justify-center text-xs text-muted-foreground">
+          <div className="flex items-center gap-6 flex-wrap justify-center text-xs text-primary-foreground/60">
             <span className="flex items-center gap-1.5">
               <Shield className="h-3.5 w-3.5" />
               Verified Sellers
@@ -117,7 +114,7 @@ export function Footer() {
               Welfare Checkpoints
             </span>
           </div>
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs text-primary-foreground/60">
             © {new Date().getFullYear()} TerraLegit. All rights reserved.
           </p>
         </div>
