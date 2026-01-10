@@ -100,13 +100,13 @@ export function Header() {
         </div>
       </div>
 
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
-        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2" data-testid="link-logo">
-            <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">T</span>
+      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 border-b shadow-sm shadow-primary/5">
+        <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between gap-4">
+          <Link href="/" className="flex items-center gap-2.5 group" data-testid="link-logo">
+            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center transition-all group-hover:scale-105 shadow-lg shadow-primary/20">
+              <span className="text-primary-foreground font-bold text-xl">T</span>
             </div>
-            <span className="font-semibold text-xl hidden sm:block">TerraLegit</span>
+            <span className="font-bold text-2xl tracking-tight hidden sm:block">TerraLegit</span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">

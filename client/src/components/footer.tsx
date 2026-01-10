@@ -25,28 +25,30 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-muted/30 border-t mt-auto">
+    <footer className="bg-primary text-primary-foreground border-t mt-auto">
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">T</span>
+            <div className="flex items-center gap-2 mb-6">
+              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-lg">
+                <span className="text-primary font-bold text-xl">T</span>
               </div>
-              <span className="font-semibold text-xl">TerraLegit</span>
+              <span className="font-bold text-2xl tracking-tight">TerraLegit</span>
             </div>
-            <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              A regulated ecosystem for animal discovery, verified acquisition, and welfare-first international transport.
+            <p className="text-primary-foreground/80 mb-6 leading-relaxed">
+              The premier institutional platform for verified animal discovery, global compliance, and welfare-first transport logistics.
             </p>
-            <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-              <a href="mailto:support@terralegit.com" className="flex items-center gap-2 hover-elevate rounded-md p-1 -m-1" data-testid="link-email">
+            <div className="flex flex-col gap-3 text-sm text-primary-foreground/90">
+              <a href="mailto:support@terralegit.com" className="flex items-center gap-2 hover:bg-white/10 transition-colors rounded-md p-2 -m-2" data-testid="link-email">
                 <Mail className="h-4 w-4" />
                 support@terralegit.com
               </a>
-              <a href="tel:+1-800-TERRA" className="flex items-center gap-2 hover-elevate rounded-md p-1 -m-1" data-testid="link-phone">
+              <a href="tel:+1-800-TERRA" className="flex items-center gap-2 hover:bg-white/10 transition-colors rounded-md p-2 -m-2" data-testid="link-phone">
                 <Phone className="h-4 w-4" />
                 +1-800-TERRA
               </a>
+            </div>
+          </div>
               <span className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
                 Global Operations
